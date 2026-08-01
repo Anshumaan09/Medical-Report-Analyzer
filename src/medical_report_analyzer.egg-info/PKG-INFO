@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: medical-report-analyzer
+Version: 0.1.0
+Summary: AI-powered medical report analyzer using OCR, RAG, and structured extraction
+Author-email: Anshumaan09 <anshumaan342@gmail.com>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.141.1
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: pillow>=12.3.0
+Requires-Dist: pydantic>=2.13.4
+Requires-Dist: pymupdf>=1.28.0
+Requires-Dist: pytest>=9.1.1
+Requires-Dist: python-dotenv>=1.2.2
+Requires-Dist: uvicorn>=0.52.0

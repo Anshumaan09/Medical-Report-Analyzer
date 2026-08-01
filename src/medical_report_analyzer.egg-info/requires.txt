@@ -1,0 +1,8 @@
+fastapi>=0.141.1
+loguru>=0.7.3
+pillow>=12.3.0
+pydantic>=2.13.4
+pymupdf>=1.28.0
+pytest>=9.1.1
+python-dotenv>=1.2.2
+uvicorn>=0.52.0
