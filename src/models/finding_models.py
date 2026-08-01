@@ -39,7 +39,7 @@ class MedicalFinding(BaseModel):
 
     status: FindingStatus = FindingStatus.UNKNOWN
 
-    category: str | None = Field(
-        default=None,
-        description="CBC, Lipid, LFT, etc."
-    )
+    # Lab-provided flag (Low, High, Borderline, etc.)
+    lab_flag: str | None = None
+
+    category: str | None = None
