@@ -5,6 +5,7 @@ import tempfile
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from services.explantaion_service import ExplanationService
 from services.analyse_servie import AnalysisService
+from services.summary_service import SummaryService
 
 
 app = FastAPI(
@@ -52,8 +53,10 @@ async def analyze_report(file: UploadFile = File(...)):
 
             findings_with_explanations.append(finding_data)
 
-        response = report.model_dump()
+        summary = SummaryService.generate_summary(report)
+        response = report.model_dump(exclude={"raw_text"})
         response["findings"] = findings_with_explanations
+        response["summary"] = summary
 
         return response
 
