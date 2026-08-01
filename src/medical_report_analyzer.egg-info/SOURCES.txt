@@ -1,9 +1,11 @@
 README.md
 pyproject.toml
 src/api/__init__.py
+src/api/main.py
 src/chunking/__init__.py
 src/embeddings/__init__.py
 src/ingestion/__init__.py
+src/ingestion/ocr.py
 src/ingestion/pdf_loader.py
 src/llm/__init__.py
 src/medical_report_analyzer.egg-info/PKG-INFO
@@ -23,3 +25,4 @@ src/services/analyse_servie.py
 src/utils/__init__.py
 tests/test_cbc_parser.py
 tests/test_models.py
+tests/test_ocr.py

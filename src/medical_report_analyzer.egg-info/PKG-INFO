@@ -15,4 +15,5 @@ Requires-Dist: pymupdf>=1.28.0
 Requires-Dist: pytesseract>=0.3.13
 Requires-Dist: pytest>=9.1.1
 Requires-Dist: python-dotenv>=1.2.2
+Requires-Dist: python-multipart>=0.0.32
 Requires-Dist: uvicorn>=0.52.0
