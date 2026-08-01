@@ -6,6 +6,7 @@ Author-email: Anshumaan09 <anshumaan342@gmail.com>
 Requires-Python: >=3.12
 Description-Content-Type: text/markdown
 Requires-Dist: fastapi>=0.141.1
+Requires-Dist: groq>=1.6.0
 Requires-Dist: loguru>=0.7.3
 Requires-Dist: opencv-python>=5.0.0.93
 Requires-Dist: pdf2image>=1.17.0

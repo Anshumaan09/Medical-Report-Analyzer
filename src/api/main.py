@@ -3,7 +3,7 @@ import shutil
 import tempfile
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
-
+from services.explantaion_service import ExplanationService
 from services.analyse_servie import AnalysisService
 
 
@@ -37,7 +37,25 @@ async def analyze_report(file: UploadFile = File(...)):
 
     try:
         report = AnalysisService.analyze_pdf(temp_path)
-        return report.model_dump()
+
+        # Generate explanations
+        explanation_service = ExplanationService()
+
+        findings_with_explanations = []
+
+        for finding in report.findings:
+            finding_data = finding.model_dump()
+
+            finding_data["explanation"] = (
+                explanation_service.explain_finding(finding)
+            )
+
+            findings_with_explanations.append(finding_data)
+
+        response = report.model_dump()
+        response["findings"] = findings_with_explanations
+
+        return response
 
     finally:
         temp_path.unlink(missing_ok=True)
