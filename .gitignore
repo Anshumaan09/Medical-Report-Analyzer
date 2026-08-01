@@ -1,0 +1,25 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Data files
+data/raw/*
+data/processed/*
+data/vector_store/*
+
+# Keep folders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/vector_store/.gitkeep
+
+# IDE
+.vscode/
+.idea/
