@@ -3,7 +3,7 @@ import shutil
 import tempfile
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
-from services.explantaion_service import ExplanationService
+from services.rag_explanation import RAGExplanationService
 from services.analyse_servie import AnalysisService
 from services.summary_service import SummaryService
 
@@ -40,7 +40,7 @@ async def analyze_report(file: UploadFile = File(...)):
         report = AnalysisService.analyze_pdf(temp_path)
 
         # Generate explanations
-        explanation_service = ExplanationService()
+        explanation_service = RAGExplanationService()
 
         findings_with_explanations = []
 

@@ -1,0 +1,1 @@
+RAG_TEST_FACT: The secret medical code is BLUE-PANDA-742.
