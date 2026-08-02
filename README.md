@@ -288,7 +288,7 @@ This project is intended for **educational and demonstration purposes only**. It
 **Anshumaan Panigrahi**
 
 * GitHub: **https://github.com/Anshumaan09**
-* LinkedIn: **https://www.linkedin.com/in/YOUR_LINKEDIN/**
+* LinkedIn: **https://www.linkedin.com/in/anshumaanpanigrahi/**
 
 ---
 
